@@ -13,3 +13,5 @@ v1.0.2
 v1.0.3
 -Fixed physics related issues & coin toss checker
 
+v1.0.4
+-Fixed refund After Leaving Within 10 Seconds
