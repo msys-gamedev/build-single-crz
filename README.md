@@ -15,3 +15,6 @@ v1.0.3
 
 v1.0.4
 -Fixed refund After Leaving Within 10 Seconds
+
+v1.0.5
+-Relink Cara Cruz Multiplayer URL
