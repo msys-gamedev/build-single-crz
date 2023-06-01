@@ -61,6 +61,7 @@
                     try {
                         alert('[EXIT][ANDROID] Exiting with code: ' + val);
                         sendMessageToUnity("Exit=" + val);
+                        console.log('[Android]href = '+"Exit=" + val);
                     } catch (err) {
                         console.log('[EXIT][ANDROID] Cannot exit: ' + err.message);
                     }
