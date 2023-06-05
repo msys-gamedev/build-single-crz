@@ -170,19 +170,19 @@
                 hidden = "webkitHidden";
                 visibilityChange = "webkitvisibilitychange";
             }
-            var audio = document.getElementById("myAudio");
             function handleVisibilityChange(hiddenState, reason) {
+                var audio = document.getElementById("myAudio");
                 if (hiddenState) {
                     if (isPageVisible) {
                         //console.log('visibility: hidden', reason);
                         isPageVisible = false;
-                        audio.muted = true;
+                        audio.volume = 0;
                         unityInstance.SendMessage("[Bridge]", "TogglePause", "PAUSED");
                     }
                 } else {
                     //console.log('visibility: restored', reason);
                     isPageVisible = true;
-                    audio.muted = false;
+                    audio.volume = 1;
                     unityInstance.SendMessage("[Bridge]", "TogglePause", "UNPAUSED");
                 }
             }
