@@ -171,18 +171,15 @@
                 visibilityChange = "webkitvisibilitychange";
             }
             function handleVisibilityChange(hiddenState, reason) {
-                var audio = document.getElementById("myAudio");
                 if (hiddenState) {
                     if (isPageVisible) {
                         //console.log('visibility: hidden', reason);
                         isPageVisible = false;
-                        audio.volume = 0;
                         unityInstance.SendMessage("[Bridge]", "TogglePause", "PAUSED");
                     }
                 } else {
                     //console.log('visibility: restored', reason);
                     isPageVisible = true;
-                    audio.volume = 1;
                     unityInstance.SendMessage("[Bridge]", "TogglePause", "UNPAUSED");
                 }
             }
